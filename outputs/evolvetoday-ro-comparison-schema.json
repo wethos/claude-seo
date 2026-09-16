@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Evolve Today vs Antal International: Boutique or National Executive Search in Romania?",
+  "description": "Feature-by-feature comparison of Evolve Today and Antal International Romania, two executive and IT recruitment firms operating in Bucharest.",
+  "datePublished": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "author": {
+    "@type": "Organization",
+    "name": "Evolve Today"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Executive Recruitment Agencies Compared: Evolve Today vs Antal International",
+    "itemListOrder": "https://schema.org/ItemListUnordered",
+    "numberOfItems": 2,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Organization",
+          "name": "Evolve Today",
+          "url": "https://evolvetoday.ro",
+          "description": "Bucharest-based IT, specialist, and executive recruitment firm with 16+ years of experience, also offering HR consulting and career counseling.",
+          "areaServed": "Romania"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Organization",
+          "name": "Antal International Romania",
+          "url": "https://www.antal.com/recruitment/romania-bucharest-v",
+          "description": "National executive recruitment agency founded in 2003, with 9 offices across Romania and a global network across 5 continents, specializing in C-level executive search and 8 named industry verticals.",
+          "foundingDate": "2003",
+          "areaServed": "Romania"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "_note": "Merge these two properties into each existing comparison-schema.json's top-level Article object. image = page hero/OG image URL (fill in once built), publisher.logo.url = company logo URL (fill in).",
+  "humanrise-ro-comparison-schema.json": {
+    "image": "[Human Rise OG image URL for this comparison page]",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Human Rise",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "[Human Rise logo URL]"
+      }
+    }
+  },
+  "humandirect-eu-comparison-schema.json": {
+    "image": "[Human Direct OG image URL for this comparison page]",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Human Direct",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "[Human Direct logo URL]"
+      }
+    }
+  },
+  "hays-ro-comparison-schema.json": {
+    "image": "[Hays Romania OG image URL for this comparison page]",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hays Romania",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "[Hays logo URL]"
+      }
+    }
+  },
+  "evolvetoday-ro-comparison-schema.json": {
+    "image": "[Evolve Today OG image URL for this comparison page]",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Evolve Today",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "[Evolve Today logo URL]"
+      }
+    }
+  }
+}

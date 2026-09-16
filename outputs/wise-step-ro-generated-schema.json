@@ -1,0 +1,79 @@
+{
+  "_fix_1_remote_jobposting": {
+    "_note": "For TELECOMMUTE roles: drop the placeholder addressLocality ('Full Remote' / 'Remote (Romania)'). Keep jobLocationType + applicantLocationRequirements only. Add validThrough and baseSalary (fill real values). Fix datePosted to the job's actual creation date, not request time.",
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "[unchanged]",
+    "description": "[unchanged]",
+    "datePosted": "[actual date this job was created — must be fixed at write time, not regenerated per-request]",
+    "validThrough": "[YYYY-MM-DDT23:59, e.g. 45 days after datePosted]",
+    "employmentType": "CONTRACTOR",
+    "jobLocationType": "TELECOMMUTE",
+    "applicantLocationRequirements": {
+      "@type": "Country",
+      "name": "Romania"
+    },
+    "hiringOrganization": {
+      "@id": "https://wise-step.ro/#organization",
+      "@type": "Organization",
+      "name": "Wise Step Recruiting",
+      "sameAs": "https://wise-step.ro"
+    },
+    "baseSalary": {
+      "@type": "MonetaryAmount",
+      "currency": "RON",
+      "value": {
+        "@type": "QuantitativeValue",
+        "minValue": "[Min]",
+        "maxValue": "[Max]",
+        "unitText": "MONTH"
+      }
+    }
+  },
+  "_fix_2_hybrid_onsite_jobposting": {
+    "_note": "For hybrid/on-site roles: keep jobLocation.address, but move work-mode annotation ('Hybrid'/'On-site') out of addressLocality into the description — locality should be just the city name.",
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Timișoara",
+        "addressCountry": "RO"
+      }
+    }
+  },
+  "_fix_3_ro_homepage_missing_blocks": {
+    "_note": "Add to ro/index.astro — same Organization @id as EN so it's recognized as the same entity, but locale-correct WebSite.",
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://wise-step.ro/#organization",
+      "name": "Wise Step Recruiting",
+      "url": "https://wise-step.ro",
+      "description": "Agenție de recrutare IT din Timișoara, România, specializată în plasare permanentă, executive search și team build-out pentru roluri Cloud & DevOps, Data & AI, Software Engineering și Technical Leadership în România și UE.",
+      "foundingDate": "2021-01-01",
+      "email": "contact@wise-step.ro",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Timișoara",
+        "addressRegion": "Timiș",
+        "addressCountry": "RO"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Romania" },
+        { "@type": "Place", "name": "European Union" }
+      ],
+      "telephone": "+40774611258",
+      "logo": { "@type": "ImageObject", "url": "https://wise-step.ro/opengraph.jpg" }
+    },
+    "website": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://wise-step.ro/ro/",
+      "inLanguage": "ro"
+    }
+  },
+  "_fix_4_hreflang_not_schema_but_related": {
+    "_note": "Not JSON-LD — <link> tags needed in <head> of every paired EN/RO route. Add via Layout.astro so it's automatic sitewide.",
+    "example_on_en_homepage": "<link rel=\"alternate\" hreflang=\"en\" href=\"https://wise-step.ro/\" /><link rel=\"alternate\" hreflang=\"ro\" href=\"https://wise-step.ro/ro/\" /><link rel=\"alternate\" hreflang=\"x-default\" href=\"https://wise-step.ro/\" />"
+  }
+}
